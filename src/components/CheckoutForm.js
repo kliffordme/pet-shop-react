@@ -138,7 +138,7 @@ const CheckoutForm = ({cart, setCart, setShowItem, showItem}) => {
     </div>
   </div>
     <div className='m-auto w-50'>
-    <form  onSubmit={onSubmit} className="p-5">
+    <form  onSubmit={onSubmit} className="p-5 border rounded shadow-lg">
       <div class="form-row pt-5">
           <div class="form-group  ">
             <label for="inputEmail4">Email</label>
