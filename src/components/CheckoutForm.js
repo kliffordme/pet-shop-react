@@ -42,7 +42,7 @@ const CheckoutForm = ({cart, setCart, setShowItem, showItem}) => {
     if(!error) {
       try{
         const {id} = paymentMethod
-        const response = await axios.post("http://localhost:4000/payment", {
+        const response = await axios.post("https://ford-petshop-api.herokuapp.com/payment", {
           amount: cart.total * 100,
           id
         })
