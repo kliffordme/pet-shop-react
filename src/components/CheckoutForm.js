@@ -74,7 +74,7 @@ const CheckoutForm = ({cart, setCart, setShowItem, showItem}) => {
 
   {!success ? 
   <div className='d-flex justify-content-between pt-5'>
-    <div className=' m-auto border rounded shadow-lg '>
+    <div className=' m-auto rounded shadow-lg '>
       <div className=''>
         {cart.german ? <div className=' '>
         <div className='d-flex justify-content-between'>
@@ -138,7 +138,7 @@ const CheckoutForm = ({cart, setCart, setShowItem, showItem}) => {
     </div>
   </div>
     <div className='m-auto w-50'>
-    <form  onSubmit={onSubmit} className="p-5 border rounded shadow-lg">
+    <form  onSubmit={onSubmit} className="p-5 rounded shadow-lg">
       <div class="form-row pt-5">
           <div class="form-group  ">
             <label for="inputEmail4">Email</label>
