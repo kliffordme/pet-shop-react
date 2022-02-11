@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#pet-card{
+  /* background-color: rgb(51, 45, 45); */
+  /* background-color: rgb(39, 38, 38); */
+  background-color: rgb(34, 32, 32);
+  color: white;
+}
+
+#nav-bar{
+  background-color: black;
+}
