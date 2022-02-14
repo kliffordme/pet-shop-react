@@ -46,29 +46,25 @@ const Dashboard = () => {
         },
         {
         id: 4,
-        breed: '',
-        price: 30000,
-        },
-        {
-        id: 5,
         breed: 'Bulldog',
         price: 2500,
         img: '/Bulldog.jpeg'
 
         },
         {
-        id: 6,
+        id: 5,
         breed: 'Poodle',
         price: 4000,
         img: '/Poodle.jpg'
 
         },
         {
-        id: 7,
+        id: 6,
         breed: 'Siberian Husky',
         price: 1500,
         img: '/Husky.jpg'
         },
+
 
 ]
 
@@ -82,12 +78,12 @@ const Dashboard = () => {
             retrieverPrice: id === 2 ? cart.retrieverPrice === 0 ? price : cart.retrieverPrice + price : cart.retrieverPrice,
             pomeranian: id === 3 ? cart.pomeranian + 1 : cart.pomeranian,
             pomeranianPrice: id === 3 ? cart.pomeranianPrice === 0 ? price : cart.pomeranianPrice + price : cart.pomeranianPrice,
-            bulldog: id === 5 ? cart.bulldog + 1 : cart.bulldog,
-            bulldogPrice: id === 5 ? cart.bulldogPrice === 0 ? price : cart.bulldogPrice + price : cart.bulldogPrice,
-            poodle: id === 6 ? cart.poodle + 1 : cart.poodle,
-            poodlePrice: id === 6 ? cart.poodlePrice === 0 ? price : cart.poodlePrice + price : cart.poodlePrice,
-            husky: id === 7 ? cart.husky + 1 : cart.husky,
-            huskyPrice: id === 7 ? cart.huskyPrice === 0 ? price : cart.huskyPrice + price : cart.huskyPrice,
+            bulldog: id === 4 ? cart.bulldog + 1 : cart.bulldog,
+            bulldogPrice: id === 4 ? cart.bulldogPrice === 0 ? price : cart.bulldogPrice + price : cart.bulldogPrice,
+            poodle: id === 5 ? cart.poodle + 1 : cart.poodle,
+            poodlePrice: id === 5 ? cart.poodlePrice === 0 ? price : cart.poodlePrice + price : cart.poodlePrice,
+            husky: id === 6 ? cart.husky + 1 : cart.husky,
+            huskyPrice: id === 6 ? cart.huskyPrice === 0 ? price : cart.huskyPrice + price : cart.huskyPrice,
             total: cart.total === 0 ? price : cart.total + price,
 
         })
@@ -115,20 +111,20 @@ const Dashboard = () => {
 
 
   return (
-      <>
+      <div className=''>
   {showItem ? <StripeContainer setCart={setCart} cart={cart} setShowItem={setShowItem} showItem={showItem} /> : <div className=' min-vh-100 bg-dark position-relative'>
-      <div className='w-75 m-auto bg-dark text-white h-100 pt-5' >
+      <div id='container' className=' bg-dark text-white pt-5 ' >
             <Card.Body className='pt-5'>
-                <div className='pt-3 row'>
-               {pets.map((pet) => ( pet.id === 4 ? <div key={pet.id} className='w-100'></div> :
-                   <Card key={pet.id} id="pet-card" className='border-0 shadow-lg m-4 p-4 col m-1'>
-                       <img className=' m-auto' src={pet.img} width={150} height={100}/>
+                <div id='cardContainer' className='pt-3 d-flex flex-wrap '>
+               {pets.map((pet) => ( 
+                   <Card key={pet.id} id="pet-card" className=' border-0 m-5 p-5'>
+                       <img className='mb-4' src={pet.img} id="petImage"/>
                        <div>
-                        <h5 className='mt-2 pt-5'>
+                        <h5 className=''>
                         {pet.breed}
                         </h5>
-                        <h6 className='m-2'>
-                        Price: ${pet.price}
+                        <h6 className=''>
+                        Price: ${pet.price}.00
                         </h6>
                        </div>
                         <Button onClick={()=>onSubmit(pet.id, pet.price, pet.breed)}>Add to Cart</Button>
@@ -199,7 +195,7 @@ const Dashboard = () => {
             </div>
             </nav>
     </div>}
-    </>
+    </div>
     );
 };
 
