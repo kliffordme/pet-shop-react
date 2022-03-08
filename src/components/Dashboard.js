@@ -118,7 +118,7 @@ const Dashboard = () => {
                 <div id='cardContainer' className='pt-3 d-flex flex-wrap '>
                {pets.map((pet) => ( 
                    <Card key={pet.id} id="pet-card" className=' border-0 m-5 p-5'>
-                       <img className='mb-4' src={pet.img} id="petImage"/>
+                       <img className='mb-3' src={pet.img} id="petImage"/>
                        <div>
                         <h5 className=''>
                         {pet.breed}
